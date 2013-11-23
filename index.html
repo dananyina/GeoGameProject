@@ -12,8 +12,8 @@
 	  }
 	  
 	  #map-canvas {
-        width: 1600px;
-		height: 1200px;
+        width: 700px;
+		height: 470px;
 		border: solid 1px black;
       }
     </style>
@@ -23,7 +23,7 @@
 		function initialize() {
 		  var mapOptions = {
 			zoom: 14,
-			center: new google.maps.LatLng(50.50, 30.50),
+			center: new google.maps.LatLng(50.45, 30.52),
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		  };
 		  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -48,7 +48,7 @@
                 crossOnDrag: true,
 			}
 			
-			var latLng = new google.maps.LatLng(50.50, 30.50);
+			var latLng = new google.maps.LatLng(50.45, 30.52);
 		
 			var marker = new google.maps.Marker(markerOption);
 			
@@ -60,10 +60,26 @@
     </script>
   </head>
   <body>
-    <div id="map-canvas"></div>
-	
-	<input type="button" onClick="return createMarker();" value="create green flag" />
-	<img src="img/green_flag_24x24.png" />
+	<table class="main"  cellspacing="0"	cellpadding="0" width="70%" align="center" >
+		<tr>
+			<td>
+				<img src="img/img1_andr_uz.JPG" />
+			</td>
+			<td>
+				<p align="center">таймер</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+
+				<input type="button" onClick="return createMarker();" value="create green flag" />
+				<img src="img/green_flag_24x24.png" />
+			</td>
+			<td>
+				<div id="map-canvas"></div>				
+			</td>
+		</tr>
+	</table>
 	
 	
   </body>
