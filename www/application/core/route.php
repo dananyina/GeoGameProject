@@ -1,6 +1,6 @@
 <?php
 	class Route
-{
+{    
     static function start()
     {
         // контроллер и действие по умолчанию
@@ -44,9 +44,8 @@
         }
         else
         {
-            /*
-            правильно было бы кинуть здесь исключение,
-            но для упрощения сразу сделаем редирект на страницу 404
+            /*кинуть здесь исключение
+            но редирект на страницу 404
             */
             Route::ErrorPage404();
         }
@@ -62,18 +61,21 @@
         }
         else
         {
-            // здесь также разумнее было бы кинуть исключение
+            //также кинуть исключение
             Route::ErrorPage404();
         }
     
+	
     }
-    
-    function ErrorPage404()
+	
+	function ErrorPage404()
     {
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('HTTP/1.1 404 Not Found');
         header("Status: 404 Not Found");
         header('Location:'.$host.'404');
     }
+	
+    
 }
 ?>
