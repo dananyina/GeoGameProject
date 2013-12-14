@@ -1,0 +1,8 @@
+about MVC
+http://habrahabr.ru/post/150267/
+
+Подключение к MySQL через PHP
+http://www.libray.narod.ru/html/pr_209.html
+
+SQL - запросы и их обработка с помощью PHP
+http://www.php.su/articles/?cat=phpdb&page=025
