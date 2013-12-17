@@ -1,6 +1,8 @@
 <?php
 class Model_Records extends Model
 {
+	public  function  get_data()
+	{
 	//DB_HOSTNAME, DB_USERNAME, DB_PASSWORD орпеделены в config.php
 		$dbconnect = mysql_connect (DB_HOSTNAME, DB_USERNAME, DB_PASSWORD); 
 			if (!$dbconnect) 
@@ -15,7 +17,7 @@ class Model_Records extends Model
 			else 
 				die ("Не могу подключиться к базе данных DB_DATABASE!");
 				
-			$query = "SELECT TOP 10 FROM ".DB_TABLE_RECORDS."ORDER BY ";
+			$query = "SELECT TOP 10 FROM ".DB_TABLE_RECORDS." ORDER BY ";
 			$res = mysql_query($query);
 			
 			$data = array();
@@ -27,6 +29,5 @@ class Model_Records extends Model
 			
 		mysql_close($dbconnect);
 		return $data;
+	}
 }
-
-?>
