@@ -15,16 +15,16 @@
 		<tr>
 			<td>
 				Points:<div></div>
-				</br>
+				<br>
 				Name:
 				<?php echo $data[0]["name"]?>
-				</br>
+				<br>
 				X:
 				<?php echo $data[0]["x"]?>
-				</br>
+				<br>
 				Y:
 				<?php echo $data[0]["y"]?>
-				</br>
+				<br>
 			</td>
 		</tr>
 		<tr>

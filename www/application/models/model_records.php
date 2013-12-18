@@ -17,7 +17,7 @@ class Model_Records extends Model
 			else 
 				die ("Не могу подключиться к базе данных DB_DATABASE!");
 				
-			$query = "SELECT TOP 10 FROM ".DB_TABLE_RECORDS." ORDER BY ";
+			$query = "SELECT * FROM ".DB_TABLE_RECORDS." WHERE 1 ORDER BY results DESC LIMIT 10";
 			$res = mysql_query($query);
 			
 			$data = array();
