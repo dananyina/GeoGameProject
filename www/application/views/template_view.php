@@ -17,8 +17,11 @@
        };
        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-       google.maps.event.addListener(map, "click", function(){
-    	   placeMarker(event.latLng);
+       google.maps.event.addListener(map, "click", function(event){
+    	   var marker = new google.maps.Marker({
+    		      position: event.latLng,
+    		      map: map
+    		  });
        });
 	}
 
