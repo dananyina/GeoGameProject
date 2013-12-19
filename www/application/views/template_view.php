@@ -57,13 +57,18 @@ function placeMarker(location) {
 		<table class="inside_div">
 			<tr>
 				<td><a href="/">Игра</a></td>
-				<td><a href="/records">Статистика</a></td>
+				<td>
+					<form action="">
+					<button type="submit">Кнопка - ссылка</button>
+					</form>
+				</td>
+				<td><a href="/places.html">Статистика</a></td>
 				<td><a href="/all">Места</a></td>
 			</tr>
 		</table>
 	</div> 
 	
-	<div id="map_canvas" style="width:600px; height:450px"></div>
+	<div id="map_canvas" style= "width:600px; height:350px"></div>
 	
 	<div id="main_part">
     <?php include 'application/views/'.$content_view; ?>
