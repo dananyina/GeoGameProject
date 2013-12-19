@@ -7,24 +7,40 @@
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script type="text/javascript">
 
-	function initialize() {
-		//центр карты
-       var latlng = new google.maps.LatLng(55.748758, 37.6474);
-       var myOptions = {
-               zoom: 8,
-               center: latlng,
-               mapTypeId: google.maps.MapTypeId.ROADMAP
-       };
-       var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-       google.maps.event.addListener(map, "click", function(event){
-    	   var marker = new google.maps.Marker({
-    		      position: event.latLng,
-    		      map: map
-    		  });
-       });
-	}
+var map;
+function initialize() {
+  var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+  var mapOptions = {
+    zoom: 4,
+    center: myLatlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
+  google.maps.event.addListener(map, 'click', function(event) {
+    placeMarker(event.latLng);
+	
+	$.ajax({
+	dataType: 'json',
+	url: 'response.php?action=sample5',
+	success: function(jsondata){
+    $('.results').html('Name = ' + jsondata.name + ', Nickname = ' + jsondata.nickname);
+  }
+});
+
+
+  });
+}
+
+function placeMarker(location) {
+  var marker = new google.maps.Marker({
+      position: location,
+      map: map
+  });
+
+  map.setCenter(location);
+}
 </script>
 </head>
 <body onload="initialize()">
