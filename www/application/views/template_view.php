@@ -1,17 +1,24 @@
+
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <title>Главная</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_css.css" />
 	
+
+	
+	
+	<?php $placeId = $data[0]["id"]; ?>
+	
+	
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script type="text/javascript">
-
-
 var map;
 function initialize() {
   var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
-  var mapOptions = {
+  var placeID = "<? echo $placeId ?>";
+  
+   var mapOptions = {
     zoom: 4,
     center: myLatlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -23,9 +30,10 @@ function initialize() {
 	
 	$.ajax({
 	dataType: 'json',
-	url: 'response.php?action=sample5',
+	url: '/getlatlng?action=placeID',
 	success: function(jsondata){
-    $('.results').html('Name = ' + jsondata.name + ', Nickname = ' + jsondata.nickname);
+    $('.results').html('x = ' + jsondata.x + ', y = ' + jsondata.y);
+	
   }
 });
 
