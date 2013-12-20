@@ -56,13 +56,9 @@ function placeMarker(location) {
 	<div id="header">
 		<table class="inside_div">
 			<tr>
-				<td><a href="/">Игра</a></td>
-				<td>
-					<form action="">
-					<button type="submit">Кнопка - ссылка</button>
-					</form>
-				</td>
-				<td><a href="/places.html">Статистика</a></td>
+			
+				<td><a href="/">игра</a></td>
+				<td><a href="/records">Статистика</a></td>
 				<td><a href="/all">Места</a></td>
 			</tr>
 		</table>
