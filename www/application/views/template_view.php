@@ -28,6 +28,8 @@
 	function placeMarker(location) {
 	 var markerBefore = new google.maps.Marker({
 	 position: location,
+	 animation: google.maps.Animation.DROP,
+	 icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
 	 map: map
 	 });
 	}
@@ -44,6 +46,8 @@
 	         var correctLatLng = new google.maps.LatLng(jsondata[0].x,jsondata[0].y);
 	         var markerAfter = new google.maps.Marker({
 	         position: correctLatLng,
+			 animation: google.maps.Animation.DROP,
+			 icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
 	         map: map
 	         });
 	     }
