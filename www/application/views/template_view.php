@@ -52,19 +52,21 @@ function placeMarker(location) {
 </script>
 </head>
 <body onload="initialize()">
-
+<style> body { background: url(Untitled-1.jpg); } </style>
 	<div id="header">
-		<table class="inside_div">
+		<table class="buttons">
 			<tr>
-			
-				<td><a href="/">игра</a></td>
-				<td><a href="/records">Статистика</a></td>
-				<td><a href="/all">Места</a></td>
-			</tr>
+				<td><a class="button large red" href="/"><span>Игра</span></a></td>
+				<td><a class="button large red" href="/records"><span>Статистика</span></a></td>
+				<td><a class="button large red" href="/all"><span>Места</span></a></td>
+				<!--<td><li class="s1"><a href="/"><span class="z01c8m31" id="z01c8m31_1">Игра</span></a></td>
+				<td><li class="s1"><a href="/records"><span class="z01c8m31" id="z01c8m31_1">Статистика</span></a></td>
+				<td><li class="s1"><a href="/records"><a href="/all"><span class="z01c8m31" id="z01c8m31_1">Места</span></a></td>
+			--></tr>
 		</table>
 	</div> 
 	
-	<div id="map_canvas" style= "width:600px; height:350px"></div>
+	<div id="map_canvas"></div>
 	
 	<div id="main_part">
     <?php include 'application/views/'.$content_view; ?>
