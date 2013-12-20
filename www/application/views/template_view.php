@@ -10,10 +10,10 @@
 	<script type="text/javascript">
 	var map;
 	function initialize() {
-	  var myLatlng = new google.maps.LatLng(50.3338,30.5066);
+	  var myLatlng = new google.maps.LatLng(50.450189,30.523401);
 	  
 	   var mapOptions = {
-	    zoom: 2,
+	    zoom: 14,
 	    center: myLatlng,
 	    mapTypeId: google.maps.MapTypeId.ROADMAP
 	  }
