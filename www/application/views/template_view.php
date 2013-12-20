@@ -15,11 +15,11 @@
 	<script type="text/javascript">
 var map;
 function initialize() {
-  var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+  var myLatlng = new google.maps.LatLng(50.450491667,30.523258333);
   var placeID = "<? echo $placeId ?>";
   
    var mapOptions = {
-    zoom: 4,
+    zoom: 14,
     center: myLatlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
@@ -54,6 +54,7 @@ function placeMarker(location) {
 <body onload="initialize()">
 <style> body { background: url(Untitled-1.jpg); } </style>
 	<div id="header">
+	<b> <font size="50" color="#4682B4" face="Comic Sans MS" >&nbsp &nbsp &nbspGeoGameProject</font></b>
 		<table class="buttons">
 			<tr>
 				<td><a class="button large red" href="/"><span>Игра</span></a></td>
@@ -68,7 +69,7 @@ function placeMarker(location) {
 	
 	<div id="map_canvas"></div>
 	
-	<div id="main_part">
+	<div >
     <?php include 'application/views/'.$content_view; ?>
 	</div>
 	

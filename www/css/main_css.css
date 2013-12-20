@@ -33,9 +33,36 @@ height:400px;
 
 }
 
+#all_view
+{
+position: absolute; top: 128px; left: 15px; 
+width:1320px; 
+height:1650px;
+background-color : #87CEEB; 
+border-radius:12px; 
+-webkit-border-radius:12px; 
+-moz-border-radius:11px; 
+-khtml-border-radius:14px
+}
+
+#dascription
+{
+width:320px; 
+height:650px;
+position: absolute; top: 0px; left: 0px; 
+background-color : #87CEEB; 
+visibility:hidden;
+}
+
 #in_main
 {
 position: absolute; top: 138px; left: 685px;
+}
+
+.place_from_bd
+{
+position: normal;
+float:left;
 }
 
 .buttons

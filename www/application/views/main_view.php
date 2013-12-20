@@ -1,9 +1,9 @@
-<div>
+<div id = "main_part">
 	<table>
 		<tr>
 			<td>
 				<div id="image_place">
-					<img src="<?php echo $data[0]["path_img"]?>" class="inside_div">
+					<img src="<?php echo $data[0]["path_img"]?>" >
 				</div>
 			</td>
 			<td rowspan=3>
