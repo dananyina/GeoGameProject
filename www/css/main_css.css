@@ -54,6 +54,11 @@ background-color : #87CEEB;
 visibility:hidden;
 }
 
+#points
+{
+position: absolute; top: 0px; left: 310px; 
+}
+
 #in_main
 {
 position: absolute; top: 138px; left: 685px;
@@ -216,9 +221,8 @@ position: absolute; top: 70px; left: 1000px;
  
 #image_place
 {
-width:200px;
-height:200px;
-background-color: red;
+width:400px;
+height:300px;
 border-radius:16px; 
 -webkit-border-radius:16px; 
 -moz-border-radius:15px; 

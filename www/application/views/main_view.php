@@ -11,12 +11,12 @@
 				<div id="docs"></div>
 				</div>
 			</td>
-		</tr>
-		<tr>
+		
 			<td>
 				Points:<div></div>
 				<br>
 				Name:
+				
 				<?php echo $data[0]["name"]?>
 				<br>
 				X:
@@ -26,7 +26,7 @@
 				<?php echo $data[0]["y"]?>
 				<br>
 			</td>
-		</tr>
+			
 		<tr>
 			<td>
 			</td>
