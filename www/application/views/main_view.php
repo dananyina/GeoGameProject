@@ -14,6 +14,8 @@
 		
 			<td>
 				Points:<div></div>
+				<li class="s1"><a href="/records"><span class="z01c8m31" id="z01c8m31_1">qwert</span></a>
+				
 				<br>
 				Name:
 				
@@ -29,6 +31,7 @@
 			
 		<tr>
 			<td>
+			<a class="button large red" href="/"><span>Next</span></a>
 			</td>
 		</tr>
 	</table>
