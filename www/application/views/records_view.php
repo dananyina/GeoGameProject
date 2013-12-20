@@ -1,4 +1,4 @@
-<div id = "main_part">
+<div id = "rec_view">
 <?php 
 	foreach ($data as $row){
 		echo $row["id"];
