@@ -14,7 +14,7 @@
 		
 			<td>
 				Points:<div></div>
-				<li class="s1"><a href="/records"><span class="z01c8m31" id="z01c8m31_1">qwert</span></a>
+				<li class="s1"><a href="/records"><span class="z01c8m31" id="z01c8m31_1">100500</span></a>
 				
 				<br>
 				Name:
