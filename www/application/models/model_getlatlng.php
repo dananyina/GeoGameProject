@@ -14,7 +14,7 @@ class Model_Getlatlng extends Model{
 		else
 			die ("Не могу подключиться к базе данных DB_DATABASE!");
 		//RED ALERT!!!
-		$query = "SELECT x, y FROM ".DB_TABLE." WHERE id=".$_POST["id"];
+		$query = "SELECT x, y FROM ".DB_TABLE." WHERE id = ".$_POST["id"];
 		$res = mysql_query($query);
 			
 		$data = array();

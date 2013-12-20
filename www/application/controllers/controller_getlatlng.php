@@ -1,5 +1,5 @@
 <?php
-class Controler_Getlatlng extends Controller{
+class Controller_Getlatlng extends Controller{
 	function __construct(){
 		$this->model = new Model_Getlatlng();
 	}

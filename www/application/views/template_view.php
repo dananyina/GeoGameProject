@@ -4,55 +4,54 @@
     <meta charset="utf-8">
     <title>Главная</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_css.css" />
-	
+	<script type="text/javascript" src="../../js/jquery.js"></script>
 
-	
-	
-	<?php $placeId = $data[0]["id"]; ?>
-	
-	
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script type="text/javascript">
-var map;
-function initialize() {
-  var myLatlng = new google.maps.LatLng(50.450491667,30.523258333);
-  var placeID = "<? echo $placeId ?>";
-  
-   var mapOptions = {
-    zoom: 14,
-    center: myLatlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-  map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+	var map;
+	function initialize() {
+	  var myLatlng = new google.maps.LatLng(50.3338,30.5066);
+	  
+	   var mapOptions = {
+	    zoom: 2,
+	    center: myLatlng,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	  }
+	  map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
-  google.maps.event.addListener(map, 'click', function(event) {
-    placeMarker(event.latLng);
-	
-	$.ajax({
-	dataType: 'json',
-	url: '/getlatlng?action=placeID',
-	success: function(jsondata){
-    $('.results').html('x = ' + jsondata.x + ', y = ' + jsondata.y);
-	
-  }
-});
+	  google.maps.event.addListener(map, 'click', function(event) {
+	    placeMarker(event.latLng);
+	    getCorrectMarker();
+	  });
+	}
 
+	function placeMarker(location) {
+	 var markerBefore = new google.maps.Marker({
+	 position: location,
+	 map: map
+	 });
+	}
 
-  });
-}
-
-function placeMarker(location) {
-  var marker = new google.maps.Marker({
-      position: location,
-      map: map
-  });
-
-  map.setCenter(location);
-}
-</script>
+	function getCorrectMarker(){
+	 var id = "<?php echo $data[0]["id"] ?>";
+	 
+	 $.ajax({
+	    type: "POST",
+	    data: {"id": id},
+	    dataType: "json",
+	    url: "/getlatlng",
+	     success: function(jsondata){
+	         var correctLatLng = new google.maps.LatLng(jsondata[0].x,jsondata[0].y);
+	         var markerAfter = new google.maps.Marker({
+	         position: correctLatLng,
+	         map: map
+	         });
+	     }
+	  });
+	}
+	</script>
 </head>
 <body onload="initialize()">
-<style> body { background: url(Untitled-1.jpg); } </style>
 	<div id="header">
 	<b> <font size="50" color="#4682B4" face="Comic Sans MS" >&nbsp &nbsp &nbspGeoGameProject</font></b>
 		<table class="buttons">
