@@ -15,6 +15,9 @@
 	var current_id_of_record = "<?php echo $data[0]["id"] ?>";
 	
 	function initialize() {
+	var lifes = 5;
+	var GlobalPoints;
+	
 		  var myLatlng = new google.maps.LatLng(50.450189,30.523401);
 	 
 	   var mapOptions = {
@@ -23,12 +26,19 @@
 	    mapTypeId: google.maps.MapTypeId.ROADMAP
 	  }
 	  map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-			
+	  
+	 
 	  google.maps.event.addListener(map, 'click', function(event) {
 	   
 	   var loc1 = placeMarker(event.latLng);
 	   var loc2 = getCorrectMarker();	  
-	   alert(getPoints(loc1,loc2));
+	   var currentPoints = getPoints(loc1,loc2);
+	   alert(currentPoints);
+	   GlobalPoints += currentPoints;
+	   if (currentPoints > 500) {lifes-- ;}
+	    alert(lifes);
+		marker.setVisible(false)
+
 		 });
 		 
 	}
@@ -97,7 +107,7 @@ function getCorrectMarker(){
                 Math.sin(dLon/2) * Math.sin(dLon/2);  
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
 	var d = R * c;
-	var magicNumber = 23.671
+	var magicNumber = 123.671
 	return (d*magicNumber);
 	}
 	
