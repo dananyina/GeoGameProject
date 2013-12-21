@@ -51,7 +51,7 @@ height:400px;
 {
 position: absolute; top: 128px; left: 15px; 
 width:1320px; 
-height:1650px;
+height:3090px;
 background-color : #87CEEB; 
 border-radius:12px; 
 -webkit-border-radius:12px; 
@@ -59,13 +59,15 @@ border-radius:12px;
 -khtml-border-radius:14px
 }
 
-#dascription
+.dascription
 {
-width:320px; 
-height:650px;
-position: absolute; top: 0px; left: 0px; 
+width:200px; 
+height:220px;
+<-position: absolute; top: 0px; left: 0px; 
 background-color : #87CEEB; 
-visibility:hidden;
+<-visibility:hidden;
+text-align:justify;
+font-size:14px;
 }
 
 #points
