@@ -32,19 +32,17 @@
 		 });
 		 
 	}
-    var markerBefore;
+
 	
 	function placeMarker(location) {
-	 if (markerBefore) {
-	 alert("To try again - begin a new game");
-	 } else {
-	 markerBefore = new google.maps.Marker({
+	 
+	 var markerBefore = new google.maps.Marker({
 	 position: location,
 	 animation: google.maps.Animation.DROP,
 	 icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
 	 map: map
 	 });
-	 }
+	 
 	 
 	 return location;
 	}
