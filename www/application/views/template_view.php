@@ -7,11 +7,15 @@
 	<script type="text/javascript" src="../../js/jquery.js"></script>
 
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="../../js/for_button_next_on_main_page.js"></script>
+	<script src="../../js/show_description.js"></script>
 	
 	<script type="text/javascript">
 	var map;
+	var current_id_of_record = "<?php echo $data[0]["id"] ?>";
+	
 	function initialize() {
-		  var myLatlng = new google.maps.LatLng(50.3338,30.5066);
+		  var myLatlng = new google.maps.LatLng(50.450189,30.523401);
 	 
 	   var mapOptions = {
 	    zoom: 13,
@@ -48,12 +52,11 @@
 	
 function getCorrectMarker(){
  var loc2;
- var id = "<?php echo $data[0]["id"] ?>";
 
 
  $.ajax({
     type: "POST",
-    data: {"id": id},
+    data: {"id": current_id_of_record},
     dataType: "json",
     url: "/getlatlng",
 	async: false,

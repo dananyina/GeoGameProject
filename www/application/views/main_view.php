@@ -3,7 +3,7 @@
 		<tr>
 			<td>
 				<div id="image_place">
-					<img src="<?php echo $data[0]["path_img"]?>" >
+					<img id="main_image" src="<?php echo $data[0]["path_img"]?>" >
 				</div>
 			</td>
 			<td rowspan=3>
@@ -31,7 +31,7 @@
 			
 		<tr>
 			<td>
-			<a class="button large red" href="/"><span>Next</span></a>
+			<a class="button large red" onclick="nextPicture()"><span>Next</span></a>
 			</td>
 		</tr>
 	</table>
